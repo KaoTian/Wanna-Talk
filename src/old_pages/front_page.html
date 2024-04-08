@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#gotop").click(function(){
+                jQuery("html,body").animate({
+                    scrollTop:0
+                },1000);
+            });
+            $(window).scroll(function() {
+                if ( $(this).scrollTop() > 300){
+                    $('#gotop').fadeIn("fast");
+                } else {
+                    $('#gotop').stop().fadeOut("fast");
+                }
+            });
+        });
+    </script>
+    <style>
+        body{
+            width: 100%;
+        }
+        .wrapper {
+            min-height: 100%; /*外層高度100%*/
+            margin-bottom: 60%; /*隨footer高度需做調整*/
+        }
+        .footer{
+            height: 450px; /*設定footer本身高度*/
+            background-color: #d9efff;
+        }
+        #gotop {
+            display: none;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            padding: 10px 15px;
+            font-size: 20px;
+            background: #777;
+            color: white;
+            cursor: pointer;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #d9efff;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .desc {
+            padding: 15px;
+            text-align: center;
+        }
+        .pic{width:500px; height:350px;overflow:hidden;}
+        .pic img{transform:scale(1,1);transition: all 1s ease-out;}
+        .pic img:hover{transform:scale(1.2,1.2);}
+    </style>
+
+    <style type="text/css">
+        .imgPreview {
+            display: none;
+            top: 0;
+            left: 0;
+            width: 20%; /*容器佔滿整個螢幕*/
+            height: 100%;
+            position: absolute; /* position: fixed;*/
+            background: rgba(0, 0, 0, 0.2);
+        }
+        footer{
+            width:100%;
+            color:#777777;
+            padding:70px 100px;
+        }
+        footer .logo{
+            width:20%;
+            float:left;
+            padding-left:100px;
+
+        }
+        footer .logo .img{width:100%;}
+        footer .data{
+            width:80%;
+            float:right;
+        }
+        footer .product{
+            border-bottom: solid 1px rgba(255,255,255,0.5);
+            padding-bottom: 40px;
+        }
+        footer .product div{
+            width: calc(100%/5);
+            float: left;
+            padding: 0 2px;
+            font-size:18px;
+            line-height: 25px;
+        }
+        footer .product .icon{float:left;}
+        footer .product .icon img{margin:0 8px 0 0;}
+        footer .copyright{margin: 20px 0;}
+        footer .copyright h6{
+            font-size:16px;
+            line-height:40px;
+            float:right;
+            margin: 0 50px 0 0 ;
+        }
+        footer ul{
+            display:block;
+            list-style-type:none;
+            margin:2px;
+        }
+        #iframe1{
+            border-style: dashed;
+            border-color: #7ab8f0;
+            width: 600px;
+            height: 250px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(function () {
+            $('.img').on('click', function () {
+                var src = $(this).attr('src');
+                $('.imgPreview img').attr('src', src);
+                $('.imgPreview').show()
+            });
+            $('.imgPreview').on('click', function () {
+
+
+                $('.imgPreview').hide()
+            });
+        })
+    </script>
+</head>
+<body style="background-color: aliceblue; max-width:100%;height:auto;">
+
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d9efff;" >
+    <div class="container" style="align-content: center">
+<!--        <a class="navbar-brand," href="#"><b>-->
+<!--            <img class="img" src="../images/ltu.png" width="50" height="50" > &nbsp; 網Talk論壇</b></a>-->
+
+        <div class="dropdown">
+            <img src="../images/ltu.png" alt="Cinque Terre" width="80" height="80">&nbsp;&nbsp;&nbsp;<b>網Talk論壇</b>
+            <div class="dropdown-content">
+                <img src="../images/ltu.png" alt="Cinque Terre" width="320" height="320">
+                <div class="desc">嶺東科技大學</div>
+            </div>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+            <form class="d-flex">
+                <input class="form-control me-2 " type="search" placeholder="搜尋" aria-label="搜尋" size="50">
+                <button class="btn btn-outline-info" type="submit">
+                    <svg viewBox="0 0 24 24" class="sc-husrwi kZacXU sc-e6ba31f5-7 bGsqNk" focusable="false" width="20"
+                         height="20" style="fill:rgba(255, 255, 255, 1)" role="img" aria-hidden="true">
+                        <path d="m20.707 19.293-4.25-4.25A7.454 7.454 0 0 0 18 10.5 7.5 7.5 0 0 0 10.5 3 7.5 7.5 0 0 0 3 10.5a7.5 7.5 0 0 0 7.5 7.5 7.454 7.454 0 0 0 4.543-1.543l4.25 4.25A1 1 0 0 0 20 21a1 1 0 0 0 .707-.293 1 1 0 0 0 0-1.414ZM10.5 16A5.506 5.506 0 0 1 5 10.5 5.506 5.506 0 0 1 10.5 5a5.506 5.506 0 0 1 5.5 5.5 5.506 5.506 0 0 1-5.5 5.5Z">
+                        </path></svg>
+                </button>
+            </form>
+    </div>
+</nav>
+<br>
+
+<marquee direction="left" height="35" scrollamount="5" width="1280" behavior="alternate" bgcolor="#fafae3" style="transform: translate(+10%,20%)">
+    <b><img src="../images/4.png" width="45" height="45">嶺東看板!!各系來留言~</b></marquee>
+<!--<nav class="navbar navbar-expand-lg navbar-light "  style="transform: translate(+60%,0%); position: absolute;" >-->
+<!--    <div class="collapse navbar-collapse navbar-collapse-center" id="navbarSupportedContent" >-->
+
+<!--        <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-center">-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link active" aria-current="page" href="#">Home</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="#">即時熱門</a>-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="#">所有看板</a>-->
+<!--            </li></li>-->
+
+<!--            <li class="nav-item dropdown">-->
+<!--                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                   所有學院-->
+<!--                </a>-->
+<!--                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+<!--                    <li><a class="dropdown-item" href="#">商管學院</a></li>-->
+<!--                    <li><a class="dropdown-item" href="#">設計學院</a></li>-->
+<!--                    <li><a class="dropdown-item" href="#">時尚學院</a></li>-->
+<!--                    <li><a class="dropdown-item" href="#">資訊學院</a></li>-->
+<!--                    <li><a class="dropdown-item" href="#">民生學院</a></li>-->
+<!--                    <li><hr class="dropdown-divider"></li>-->
+<!--                    <li><a class="dropdown-item" href="#">其他科系</a></li>-->
+<!--                </ul>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </div>-->
+
+<!--</nav>-->
+<!-- Nav tabs -->
+<div style="transform: translate(50%,20%);position: absolute; " >
+    <ul class="nav nav-tabs" >
+        <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#menu1">即時熱門</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#menu2">所有看板</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#menu2">商管</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#menu2">設計</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#menu2">時尚</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#menu2">資訊</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#menu2">民生</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#menu3" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                其他
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#a1">商管學院</a></li>
+                <li><a class="dropdown-item" href="#2">設計學院</a></li>
+                <li><a class="dropdown-item" href="#3">時尚學院</a></li>
+                <li><a class="dropdown-item" href="#4">資訊學院</a></li>
+                <li><a class="dropdown-item" href="#5">民生學院</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#6">其他科系</a></li>
+            </ul>
+        </li>
+    </ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+    <div class="tab-pane container fade in active" id="home">
+        123
+    </div>
+    <div class="tab-pane container fade" id="menu1">
+        456
+    </div>
+    <div class="tab-pane container fade" id="menu2">
+        789
+    </div>
+    <div class="tab-pane container fade" id="a1">
+        101112
+    </div>
+
+</div>
+</div>
+<!--<nav class="navbar navbar-expand-lg navbar-light" style="transform: translate(+35%,20%); position: absolute;" >-->
+<!--    <div id="iframe1">-->
+<!--        <iframe src="../php/post.php" width="250px" height="150px"></iframe>-->
+<!--    </div>-->
+<!--</nav>-->
+
+<nav class="navbar navbar-expand-lg navbar-light"style="transform: translate(40%,150%); position: absolute;">
+    <form method=get action=login_process.php>
+        <table  width="800" border="1" align="center" cellpadding="5" cellspacing="0" bgcolor="#d9efff" >
+            <tr>
+                <td align="center" bgcolor="#7ab8f0">會員註冊</td>
+            </tr>
+            <tr>
+            <td align="center"><a href="https://www.google.com.tw "target="_blank"><input type="button" value="Google 註冊/登入" style="width:250px;height:30px;font-size:15px;background-color:white;color: black;border-radius: 10px; "></a></td>
+            </tr>
+            <tr>
+                <td align="center"><a href="https://zh-tw.facebook.com"target="_blank"><input type="button" value="Facebook 註冊/登入" style="width:250px;height:30px;font-size:15px;background-color: midnightblue;color: white;border-radius: 10px; "></a></td>
+            </tr>
+
+            <tr>
+                <td align="center" valign="baseline">信箱 &nbsp;<input type = text name = userid value = john@gmail.com required style="border-radius: 10px">
+                </td>
+            </tr>
+            <tr>
+
+            </tr>
+            <tr>
+                <td align="center" valign="baseline">密碼 &nbsp;<input type = text name = userpwd value = 123 required style="border-radius: 10px">
+                </td>
+<!--                <input type= submit value=登入 type="button" style="width:100px;height:30px;font-size:15px;background-color:#7ab8f0;color: white;border-radius: 10px;">-->
+            </tr>
+            <tr>
+                <td align="center"><a href="login.html"><input type="button" value="註冊" style="width:100px;height:30px;font-size:15px;background-color:#7ab8f0;color: white;border-radius: 10px;"></a>
+                <a href="login_process.php"><input type="button" value="登入" style="width:100px;height:30px;font-size:15px;background-color:#7ab8f0;color: white;border-radius: 10px;"></a></td>
+            </tr>
+        </table>
+    </form>
+</nav>
+<div>
+    <table  style="font-family: arial, sans-serif;
+			  border-collapse: collapse;
+			  width: 90%;
+			  margin : auto;">
+        <tr>
+            <th class="pic"><img src="../images/4.png" style="padding:30px;" /></th>
+            <th class="pic"><img src="../images/4.png" style="padding:30px;" /></th>
+            <th class="pic"><img src="../images/4.png" style="padding:30px;" /></th>
+        </tr>
+    </table>
+</div>
+
+
+<div class="wrapper">
+
+</div>
+<div id="gotop" style="background-color: #7ab8f0">˄</div>
+<footer class=" footer">
+    <div class="logo"><img src="../images/ltu.png" width="150" height="150"></div>
+    <div class="data"  style="font-size:10vw">
+        <div class="product clearfix">
+            <div>
+                <ul>
+                    <li>關於我們</li>
+                    <li>關於網Talk論壇</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>所有學院看板</li>
+                    <li>商管學院</li>
+                    <li>設計學院</li>
+                    <li>時尚學院</li>
+                    <li>資管學院</li>
+                    <li>民生學院</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>探索</li>
+                    <li>最新消息</li>
+                    <li>活動</li>
+                    <li>即時熱門</li>
+                </ul>
+            </div>
+            <div class="icon">
+                <a href="#"><img src="../images/facebook.png" width="30" height="30"></a>
+                <a href="#"><img src="../images/instagram.png" width="30" height="30"></a>
+                <a href="#"><img src="../images/google.png" width="35" height="35"></a>
+                <a href="#"><img src="../images/ltultu.png" width="30" height="30"></a>
+
+<!--                <h6>服務時間<br>周一至周五<br>上午9:00 ~ 下午5:00</h6>-->
+                <h6>
+                    <br>
+                    本文瀏覽次數: <script type="text/javascript" language="Javascript" src="../php/article_counter.php"></script>
+                </h6>
+            </div>
+
+        </div>
+<!--        <div class="copyright">-->
+<!--            <h6>©2021 技嘉科技股份有限公司 All Rights Reserved. Website by 林國田</h6>-->
+<!--        </div>-->
+<!--        <p align="center" >本文瀏覽次數:-->
+<!--        <script type="text/javascript" src="../php/1.php?f=onestopweb"></script>-->
+<!--        </p>-->
+    </div>
+
+</footer>
+</body>
+</html>

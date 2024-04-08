@@ -1,0 +1,301 @@
+body{
+    width: 100%;
+}
+.wrapper {
+    min-height: 100%; /*外層高度100%*/
+    width: 100%;
+    margin-bottom: 0%; /*隨footer高度需做調整*/
+}
+/*.footer{*/
+/*    float: left;*/
+/*    height: 450px; !*設定footer本身高度*!*/
+/*    background-color: #d9efff;*/
+/*}*/
+#gotop {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 15px;
+    font-size: 20px;
+    background: #777;
+    color: white;
+    cursor: pointer;
+}
+.pic{width: 30%; height: 30%; overflow:hidden;}
+.pic img{transform:scale(1,1);transition: all 1s ease-out;}
+.pic img:hover{transform:scale(1.2,1.2);}
+
+
+/*共用區*/
+*{
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    /*width解除 padding、border的關西*/
+
+}
+html{
+    font-family:"微軟正黑體", Arial, sans-serif;/*字體*/
+    -webkit-text-size-adjust:none;/*在ios 旋轉畫面鎖定文字不縮放*/
+}
+body{ background-color:#eeeeee;}
+
+
+
+
+/*桌機 優先*/
+header #top-menu{
+    display:none;
+}
+header nav{
+    width:100%;
+    height:60px;
+    background-color:mediumblue;
+}
+header nav ul{
+    width:100%;
+    height:60px;
+}
+header nav ul li{
+    float:left;
+    display:block;
+    width:calc(100%/7);
+    line-height:60px;
+    text-align:center;
+}
+header nav ul li a{
+    display:block;
+    text-decoration:none;
+    color:#FFF;
+}
+header nav ul li a:hover{
+    color:darkblue;
+    background-color:#B0E0E6;
+}
+.new a:hover{
+    color: yellow;
+    background-color: darkgreen;
+}
+
+article #banner{
+    width:100%;
+    height:300px;
+    border:10px solid #FFF;
+}
+article #banner h1{
+    display:block;
+    width:100%;
+    height:300px;
+    background-image:url(../images/desktop-banner.jpg);
+    text-indent:-9999px;
+}
+article #content{
+    width:100%;
+    overflow:hidden;
+    background-color:#FFF;
+    padding:10px 0px;
+}
+article #content .box{
+    float:left;
+    width:calc(100%/3 - 25px);
+    margin-left:20px;
+}
+article #content .box h2{
+    font-size:1.5em;
+    line-height:2;
+    border-bottom:2px solid #7ab8f0;
+    width:90%;
+    margin:0 auto;
+    color:#7ab8f0;
+    text-align:center;
+}
+article #content .box p{
+    font-size:15px;
+    line-height:1.8;
+    padding:20px;
+    color:#333;
+}
+
+
+
+/*footer{*/
+/*    width:100%;*/
+/*    height:100%;*/
+/*    background-color:#7ab8f0;*/
+/*    color:#FFFFFF;}*/
+/*footer h6{*/
+/*    font-size:18px;*/
+/*    line-height:50px;*/
+/*    text-align:center;*/
+/*}*/
+
+
+/*.手機*/
+@media screen and (max-width:736px){
+    .wrapper{
+        width:100%;
+        min-width:320px;
+    }
+    header #top-menu{
+        display:block;
+        position:relative;
+        background-color:#7ab8f0;
+        width:100%;
+        height:60px;
+    }
+    header #top-menu h4{
+        display:block;
+        width:60px;
+        height:40px;
+        background-image:url(../images/btn.png);
+        position:absolute;
+        right:5px;
+        top:10px;
+        text-indent:-9999px;
+    }
+
+    header nav{
+        background-color:#7ab8f0;
+        display:none;
+        width:100%;
+        height:auto;
+    }
+    header nav ul{
+        width:100%;
+        height:auto;
+    }
+    header nav ul li{
+        width:100%;
+        height:50px;
+        float:none;
+        display:block;
+        line-height:50px;
+        text-align:center;
+        border-top:solid 1px #fff;
+    }
+    header nav ul li a{
+        text-decoration:none;
+        background-color:#7ab8f0;
+        color:darkblue;
+    }
+    header nav ul li a:hover{
+        background-color:#B0E0E6;
+        color:#fff;
+    }
+    header nav ul li a:hover{
+        background-color:#B0E0E6;
+        color:#fff;
+    }
+
+
+
+    article #banner{
+        width:100%;
+        min-width:320px;
+        height:auto;
+        margin:0 auto;
+    }
+    article #banner h1{
+        display:block;
+        width:100%;
+        height:0;
+        padding-bottom:62.5%;
+        background-image:url(../images/mobile-banner.jpg);
+        background-position:center center;
+        text-indent:-9999px;
+    }
+
+
+    article #content{
+        width:100%;
+        overflow:hidden;
+        background-color:#FFF;
+        padding:10px 0px;
+    }
+    article #content .box{
+        float:none;
+        width:90%;
+        margin:0 auto;
+    }
+    article #content .box h2{
+        font-size:1.5em;
+        line-height:2;
+        border-bottom:2px solid #900;
+        width:90%;
+        margin:0 auto;
+        color:#900;
+        text-align:center;
+    }
+    article #content .box p{
+        font-size:15px;
+        line-height:1.8;
+        padding:20px;
+        color:#333;
+    }
+
+
+    footer{
+        width:100%;
+        height:50px;
+        background-color:#A00;
+        color:#FFFFFF;}
+    footer h6{
+        font-size:18px;
+        line-height:50px;
+        text-align:center;
+    }
+
+
+    /*平板*/
+    @media screen and (min-width:737px) and (max-width:1024px) {
+    }
+}
+/*.footer{*/
+/*    height: 450px; !*設定footer本身高度*!*/
+/*    background-color: #d9efff;*/
+/*    width:100%;*/
+/*    color:#777777;*/
+/*    padding:70px 100px;*/
+/*}*/
+/*.footer .logo{*/
+/*    width:20%;*/
+/*    float:left;*/
+/*    padding-left:100px;*/
+
+/*}*/
+/*.footer .logo .img{width:100%;}*/
+/*.footer .data{*/
+/*    width:80%;*/
+/*    float:right;*/
+/*}*/
+/*.footer .product{*/
+/*    border-bottom: solid 1px rgba(255,255,255,0.5);*/
+/*    padding-bottom: 40px;*/
+/*}*/
+/*.footer .product div{*/
+/*    width: calc(100%/5);*/
+/*    float: left;*/
+/*    padding: 0 2px;*/
+/*    font-size:18px;*/
+/*    line-height: 25px;*/
+/*}*/
+/*.footer .product .icon{float:left;}*/
+/*.footer .product .icon img{margin:0 8px 0 0;}*/
+/*.footer .copyright{margin: 20px 0;}*/
+/*.footer .copyright h6{*/
+/*    font-size:16px;*/
+/*    line-height:40px;*/
+/*    float:right;*/
+/*    margin: 0 50px 0 0 ;*/
+/*}*/
+/*.footer ul{*/
+/*    display:block;*/
+/*    list-style-type:none;*/
+/*    margin:2px;*/
+/*}*/
+/*#iframe1{*/
+/*    border-style: dashed;*/
+/*    border-color: #7ab8f0;*/
+/*    width: 600px;*/
+/*    height: 250px;*/
+/*}*/

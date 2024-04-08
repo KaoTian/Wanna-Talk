@@ -1,0 +1,231 @@
+/*電腦介面*/
+body {
+    width: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    /*外層高度100%*/
+    width: 100%;
+    margin-bottom: 0%;
+    /*隨footer高度需做調整*/
+}
+
+#gotop {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 15px;
+    font-size: 20px;
+    background: #777;
+    color: white;
+    cursor: pointer;
+}
+
+
+header #top-menu {
+    display: none;
+}
+
+header nav {
+    height: 60px;
+    background-color: mediumblue;
+}
+
+header nav ul {
+    height: 60px;
+}
+
+header nav ul li {
+    float: left;
+    display: block;
+    width: calc(100%/6);
+    line-height: 60px;
+    text-align: center;
+}
+
+header nav ul li b {
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+}
+
+header nav ul li b:hover {
+    color: darkblue;
+    background-color: #B0E0E6;
+}
+
+.fullpage {
+    width: 100%;
+    height: 100%;
+    /*background-image: url('images/9.jpg');*/
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(240, 255, 255, 0.8)),;
+       /* url('../images/9.jpg') no-repeat 0% 20%/ cover */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    /* 透明度 */
+    /*opacity: 0.2;*/
+    background-attachment: fixed;
+    float: left;
+}
+
+.marquee {
+    direction: left;
+    height: 35;
+    width: 90%;
+    behavior: alternate;
+    background-color: #fafae3;
+}
+
+.img_change {
+    width: 90%;
+    height: 400%;
+    margin-left: 5%;
+}
+
+.news {
+    width: 60%;
+    height: 40%;
+    margin-left: 20%;
+    float: left;
+    text-align: center;
+}
+
+.small-img {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    opacity: 0.5;
+    background-attachment: fixed;
+    float: left;
+}
+
+.img1 {
+    background-image: url('../images/54.jpg');
+}
+
+.pic{width: 30%; height: 30%; overflow:hidden;}
+.pic img{transform:scale(1,1);transition: all 1s ease-out;}
+.pic img:hover{transform:scale(1.2,1.2);}
+
+.modal_name{
+    left: 40%;
+    top: 15%;
+    height: 210px ;
+}
+
+.modal_photo{
+    left: 40%;
+    top: 15%;
+    height: 205px ;
+}
+
+.modal_password{
+    left: 40%;
+    top: 15%;
+    height: 340px ;
+}
+
+.phone_menu{
+    display: none;
+}
+
+.footer_page{
+    background-Color: #d9efff;
+    margin-top: 80%;
+}
+
+/*電腦介面結尾*/
+
+
+/*手機版面*/
+@media screen and (max-width:736px) {
+    .wrapper {
+        width: 100%;
+        min-width: 320px;
+    }
+
+    header #top-menu {
+        display: none;
+        position: relative;
+        background-color: #7ab8f0;
+        width: 100%;
+        height: 60px;
+    }
+
+    header #top-menu h4 {
+        display: block;
+        width: 60px;
+        height: 40px;
+        background-image: url(../images/btn.png);
+        position: absolute;
+        right: 5px;
+        top: 10px;
+        text-indent: -9999px;
+    }
+
+    header nav {
+        background-color: #7ab8f0;
+        display: none;
+        width: 100%;
+        height: auto;
+    }
+
+    header nav ul {
+        width: 100%;
+        height: auto;
+    }
+
+    header nav ul li {
+        width: 100%;
+        height: 50px;
+        float: none;
+        display: block;
+        line-height: 50px;
+        text-align: center;
+        border-top: solid 1px #fff;
+    }
+
+    header nav ul li a {
+        text-decoration: none;
+        background-color: #7ab8f0;
+        color: darkblue;
+    }
+
+    header nav ul li a:hover {
+        background-color: #B0E0E6;
+        color: #fff;
+    }
+
+    header nav ul li a:hover {
+        background-color: #B0E0E6;
+        color: #fff;
+    }
+    .img_change {
+        width: 90%;
+        height: 100%;
+        margin-left: 5%;
+    }
+    .modal_name{
+        left: 2.5%;
+        top: 15%;
+        height: 210px;
+    }
+    .modal_photo{
+        left: 2.5%;
+        top: 15%;
+        height: 25% ;
+    }
+    .phone_menu{
+        display:block;
+    }
+    .footer_page{
+        background-Color: #d9efff;
+        margin-top: 200%;
+    }
+}
+/*手機介面結尾*/

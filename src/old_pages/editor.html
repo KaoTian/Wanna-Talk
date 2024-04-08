@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="ckeditor5-build-classic/ckeditor.js"></script>
+    </head>
+    <body>
+        <form id="form1" runat="server">
+            <div style="margin: 0 auto; width: 700px">
+                <textarea id="editorDemo"></textarea>
+            </div>
+        </form>
+        <script>
+            ClassicEditor
+                .create(document.querySelector('#editorDemo'))
+                .then(editor => {
+                    console.log(editor);
+                })
+        </script>
+    </body>
+</html>
