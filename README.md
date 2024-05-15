@@ -1,70 +1,66 @@
 # Wanna Talk 網Talk 論壇網站
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+網站已完成上傳發布 [點此即可瀏覽](https://wanna-talk-e1162.web.app/).
 
-## Available Scripts
+## 使用技術
+* ReactJS
+* Node.js
+* Google Firebase
 
-In the project directory, you can run:
+## 開發動機
+隨著現代社會年輕人總是會在論壇上面分享許多事情，讓大家都可以清楚地了解各分層的一些事情，畢竟每一個人都有不一樣的人生，透過論壇可將個人經歷分享給他人，讓也有相同經歷的人可以找尋同溫層的溫暖，也可以透過他人的回應來讓自己有歸屬感。
 
-### `npm start`
+以現有公開的論壇網站中，例如：Dcard、PTT等，都有開發各自專版，所以以論壇為發想，建置嶺東科大師生能使用的網站，而這也是想完成屬於自己想做的主題。
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+本專題主要目的是應用互動技術來達成嶺東科技大學師生可多多交流所有各方面的相關資訊，可達成師生共享的環境。主要內容以論壇為主，頁面有放置各系的文章提供大家觀看，讓大家可以更加瞭解彼此科系的各項事務，以及如果需要轉學考或者是雙主修可以更加知曉。
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `論壇首頁`
 
-### `npm test`
+首頁的部分展示出會員列表、主要選單、公告、活動展示。
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![image](README_img/首頁.png)
 
-### `npm run build`
+### `會員登入/註冊`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+登入頁面包含登入及註冊，依照使用者做使用。
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![image](README_img/登入頁面.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `會員文章發佈/收藏文章/會員資料`
 
-### `npm run eject`
+進入會員介面可以查看曾發布過的文章、收藏的文章及自己的資料
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![image](README_img/會員發佈文章.png)
+![image](README_img/會員收藏文章.png)
+![image](README_img/會員資料.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `所有文章列表`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+使用者發佈文章後，會將全部顯示在此頁面。
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![image](README_img/文章列表.png)
 
-## Learn More
+### `發表文章`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+可將選好的主題、圖片、內容、分類輸入好並發佈就可以在所有文章列表及各自學院看到
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![image](README_img/文章發表.png)
 
-### Code Splitting
+### `文章內頁`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+文章列表中點選想看的內容，會將當初編輯的內容顯示出來。在下方可以點讚、收藏、留言
 
-### Analyzing the Bundle Size
+![image](README_img/文章內頁.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### `後端資料庫建置`
 
-### Making a Progressive Web App
+後端使用Node.js及Google Firebase建置，使用Firebase中的Firestor Database、Authentication、Storage、Hosting完成建置部屬
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![image](README_img/後臺auth.png)
+![image](README_img/後臺database.png)
+![image](README_img/後臺storage.png)
+![image](README_img/後臺hosting.png)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 結論
+第一次完成心目中想做的主題，投稿比賽也得到不錯成績，全部並不是我的功勞，而是其他組員一起獲得的。
+如果可以再重新修改，想把介面重新設計，頁面、平面設計是我的弱項，所以呈現出來並不是那麼美觀，也想把功能再做得更完整、更豐富。
