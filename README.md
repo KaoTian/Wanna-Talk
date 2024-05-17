@@ -28,7 +28,7 @@
 
 ### `會員文章發佈/收藏文章/會員資料`
 
-進入會員介面可以查看曾發布過的文章、收藏的文章及自己的資料
+進入會員介面可以查看曾發布過的文章、收藏的文章及自己的資料。
 
 ![image](README_img/會員發佈文章.png)
 ![image](README_img/會員收藏文章.png)
@@ -42,19 +42,20 @@
 
 ### `發表文章`
 
-可將選好的主題、圖片、內容、分類輸入好並發佈就可以在所有文章列表及各自學院看到
+可將選好的主題、圖片、內容、分類輸入好並發佈就可以在所有文章列表及各自學院看到。
 
 ![image](README_img/文章發表.png)
 
 ### `文章內頁`
 
-文章列表中點選想看的內容，會將當初編輯的內容顯示出來。在下方可以點讚、收藏、留言
+在進去頁面前，會檢測是否有登入，沒有的話會進入登入頁面，登入後才可瀏覽。
+文章列表中點選想看的內容，會將當初編輯的內容顯示出來。在下方可以點讚、收藏、留言。
 
 ![image](README_img/文章內頁.png)
 
 ### `後端資料庫建置`
 
-後端使用Node.js及Google Firebase建置，使用Firebase中的Firestor Database、Authentication、Storage、Hosting完成建置部屬
+後端使用Node.js及Google Firebase建置，使用Firebase中的Firestor Database、Authentication、Storage、Hosting完成建置部屬。
 
 ![image](README_img/後臺auth.png)
 ![image](README_img/後臺database.png)
